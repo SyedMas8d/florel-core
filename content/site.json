@@ -1,0 +1,496 @@
+{
+  "site": {
+    "name": "Florel Core General Contracting and Interior Design LLC",
+    "brandName": "Florel Core",
+    "brandSubtitle": "General Contracting & Interior Design",
+    "tagline": "Building Spaces. Creating Experiences.",
+    "logo": "assets/images/logo.png",
+    "logoMark": "assets/images/logo-mark.png",
+    "favicon": "assets/images/favicon.png",
+    "titleSuffix": " | Florel Core, Abu Dhabi",
+    "language": "en"
+  },
+
+  "contact": {
+    "companyName": "Florel Core General Contracting and Interior Design LLC",
+    "address": "Abu Dhabi, United Arab Emirates",
+    "city": "Abu Dhabi",
+    "countryCode": "AE",
+    "serviceArea": "All across the UAE",
+    "phones": ["+971 58 171 7298", "+971 58 171 7098"],
+    "whatsapp": ["+971 58 171 7298", "+971 58 171 7098"],
+    "email": "info@florelcoreuae.com",
+    "whatsappMessage": "Hello Florel Core, I would like to enquire about your interior design / contracting / renovation services. Please share more information."
+  },
+
+  "social": [],
+
+  "navigation": {
+    "links": [
+      { "label": "Home", "href": "#/" },
+      { "label": "About", "href": "#/about" },
+      { "label": "Services", "href": "#/services" },
+      { "label": "Projects", "href": "#/projects" },
+      { "label": "Testimonials", "href": "#/testimonials" },
+      { "label": "Contact", "href": "#/contact" }
+    ],
+    "cta": { "label": "Get a Quote", "href": "#/contact" }
+  },
+
+  "mobileBar": [
+    { "label": "Call", "href": "tel", "icon": "phone" },
+    { "label": "WhatsApp", "href": "whatsapp", "icon": "whatsapp" },
+    { "label": "Get Quote", "href": "#/contact", "icon": "quote" }
+  ],
+
+  "floatingWhatsApp": { "enabled": true, "label": "Chat on WhatsApp" },
+
+  "services": [
+    {
+      "id": "interior-design",
+      "title": "Interior Design",
+      "summary": "Thoughtful interior concepts designed around your lifestyle, brand, space and budget.",
+      "image": "assets/images/services/interior-design.jpg",
+      "imageAlt": "Elegant living room interior with neutral tones and rattan pendant lights",
+      "items": ["Concept Development", "Space Planning", "Material Selection", "Furniture & Décor Planning", "Lighting Concepts", "Interior Styling", "Residential Interiors", "Commercial Interiors"]
+    },
+    {
+      "id": "2d-3d-design",
+      "title": "2D & 3D Design",
+      "summary": "Visualize your space before execution with professional design concepts and detailed 2D and 3D presentations.",
+      "image": "assets/images/services/2d-3d-design.jpg",
+      "imageAlt": "Designer reviewing architectural floor plan drawings",
+      "items": ["2D Floor Plans", "Furniture Layouts", "Elevations", "3D Interior Visualization", "Concept Development", "Space Planning"]
+    },
+    {
+      "id": "general-contracting",
+      "title": "General Contracting",
+      "summary": "Professional project execution combining design coordination, civil works, MEP and finishing under one team.",
+      "image": "assets/images/services/general-contracting.jpg",
+      "imageAlt": "Construction team working on a building site",
+      "items": ["Project Coordination", "Civil Works", "Renovation", "Fit-Out", "Finishing Works", "Site Supervision"]
+    },
+    {
+      "id": "renovation",
+      "title": "Building Renovation",
+      "summary": "Transform existing spaces with practical renovation solutions tailored to your requirements.",
+      "image": "assets/images/services/renovation.jpg",
+      "imageAlt": "Renovated apartment hallway with new wooden flooring",
+      "items": ["Villa Renovation", "Apartment Renovation", "Office Renovation", "Commercial Renovation", "Structural & Civil Modifications", "Finishing Upgrades"]
+    },
+    {
+      "id": "civil-works",
+      "title": "Civil Works",
+      "summary": "Reliable civil and finishing works — from masonry and plastering to tiling, painting and waterproofing.",
+      "image": "assets/images/services/civil-works.jpg",
+      "imageAlt": "Wall being painted with a paint roller",
+      "items": ["Masonry", "Plastering", "Tiling", "Flooring", "Painting", "Waterproofing", "Partition Works", "Ceiling Works", "General Civil Works"]
+    },
+    {
+      "id": "mep",
+      "title": "MEP Services",
+      "summary": "Reliable mechanical, electrical and plumbing solutions integrated into your project.",
+      "image": "assets/images/services/mep.jpg",
+      "imageAlt": "Electrician installing and testing an electrical panel",
+      "items": ["Electrical Works", "Plumbing", "HVAC Coordination", "Lighting Installation", "Maintenance", "MEP Modification & Upgrades"]
+    },
+    {
+      "id": "carpentry",
+      "title": "Carpentry & Joinery",
+      "summary": "Custom-made furniture, kitchens, wardrobes and joinery crafted to fit your space precisely.",
+      "image": "assets/images/services/carpentry.jpg",
+      "imageAlt": "Modern kitchen with custom wooden joinery and fluted island",
+      "items": ["Custom Furniture", "Wardrobes", "Kitchens", "TV Units", "Doors", "Wooden Partitions", "Built-in Storage", "Custom Joinery"]
+    },
+    {
+      "id": "fit-out",
+      "title": "Interior Fit-Out & Décor",
+      "summary": "Complete interior finishing for homes, offices, retail and hospitality spaces — ready to move in.",
+      "image": "assets/images/services/fit-out.jpg",
+      "imageAlt": "Bright office interior fit-out with modern furniture",
+      "items": ["False Ceilings", "Feature Walls", "Wall Treatments", "Decorative Elements", "Lighting", "Flooring", "Furniture", "Soft Furnishings", "Complete Interior Finishing"]
+    },
+    {
+      "id": "maintenance",
+      "title": "General Maintenance",
+      "summary": "Dependable maintenance for villas, buildings and offices — keeping your property in top condition.",
+      "image": "assets/images/services/maintenance.jpg",
+      "imageAlt": "Well-maintained modern bathroom with glass shower",
+      "items": ["Building Maintenance", "Villa Maintenance", "Office Maintenance", "Electrical Maintenance", "Plumbing Maintenance", "AC/HVAC-related Coordination", "Carpentry Repairs", "Civil Repairs", "Preventive Maintenance"]
+    }
+  ],
+
+  "projectCategories": ["All", "Residential", "Commercial", "Interior Design", "Renovation", "Fit-Out", "Civil Works", "MEP", "Carpentry", "Maintenance"],
+
+  "projects": [
+    {"title": "Walnut & Marble TV Wall", "categories": ["Residential", "Carpentry", "Fit-Out"], "location": "", "description": "Floor-to-ceiling walnut joinery with backlit display niches framing a dark marble feature wall.", "image": "assets/images/projects/walnut-marble-tv-wall.jpg", "imageAlt": "Walnut & Marble TV Wall", "featured": true},
+    {"title": "Green Marble Vanity", "categories": ["Residential", "Interior Design", "Renovation"], "location": "", "description": "Full-height green marble feature wall and vanity with a backlit round mirror and walnut side panels.", "image": "assets/images/projects/green-marble-vanity.jpg", "imageAlt": "Green Marble Vanity", "featured": true},
+    {"title": "Marble & Timber Powder Room", "categories": ["Residential", "Interior Design"], "location": "", "description": "Marble walls and vanity with a backlit mirror, timber-clad surround and brass fittings.", "image": "assets/images/projects/marble-powder-room.jpg", "imageAlt": "Marble & Timber Powder Room", "featured": true},
+    {"title": "Illuminated Walnut Shelving", "categories": ["Residential", "Carpentry"], "location": "", "description": "Custom walnut shelving wall with integrated vertical LED lighting and a matching walnut door.", "image": "assets/images/projects/walnut-lit-shelving.jpg", "imageAlt": "Illuminated Walnut Shelving", "featured": true},
+    {"title": "Living Room Ceiling & Lighting", "categories": ["Residential", "Interior Design", "Fit-Out"], "location": "", "description": "Gypsum ceiling with cove lighting and recessed spotlights, finished with statement chandeliers.", "image": "assets/images/projects/living-room-cove-lighting.jpg", "imageAlt": "Living Room Ceiling & Lighting", "featured": true},
+    {"title": "Fluted Walnut TV Unit", "categories": ["Residential", "Carpentry"], "location": "", "description": "Walnut media wall with fluted panels, brass inlay strips and open display shelving.", "image": "assets/images/projects/walnut-tv-unit-brass.jpg", "imageAlt": "Fluted Walnut TV Unit", "featured": true},
+    {"title": "Botanical Mural Powder Room", "categories": ["Residential", "Interior Design", "Renovation"], "location": "", "description": "Statement botanical wall mural with a floating vanity, wall-hung WC and timber-look flooring.", "image": "assets/images/projects/botanical-powder-room.jpg", "imageAlt": "Botanical Mural Powder Room", "featured": true},
+    {"title": "Glass-Front Display Cabinetry", "categories": ["Residential", "Carpentry"], "location": "", "description": "Full-height black-framed glass cabinets with LED-lit shelves and handleless lower storage.", "image": "assets/images/projects/glass-display-cabinetry.jpg", "imageAlt": "Glass-Front Display Cabinetry", "featured": false},
+    {"title": "Stone-Effect Bathroom", "categories": ["Residential", "Renovation"], "location": "", "description": "Floor-to-ceiling stone-effect tiling, floating vanity, backlit mirror and lit display niches.", "image": "assets/images/projects/travertine-bathroom.jpg", "imageAlt": "Stone-Effect Bathroom", "featured": false},
+    {"title": "Walk-In Shower with Brass Fittings", "categories": ["Residential", "Renovation", "MEP"], "location": "", "description": "Level-access shower with linear drain, brushed brass shower system and concealed cistern.", "image": "assets/images/projects/brass-walk-in-shower.jpg", "imageAlt": "Walk-In Shower with Brass Fittings", "featured": false},
+    {"title": "Bathroom with Lit Niches", "categories": ["Residential", "Renovation"], "location": "", "description": "Glass shower enclosure, stone vanity and LED-lit recessed niches.", "image": "assets/images/projects/bathroom-lit-niches.jpg", "imageAlt": "Bathroom with Lit Niches", "featured": false},
+    {"title": "Shower Enclosure & Bath", "categories": ["Residential", "Renovation", "MEP"], "location": "", "description": "Frameless glass shower with rain head and lit niche beside a tiled built-in bathtub.", "image": "assets/images/projects/glass-shower-enclosure.jpg", "imageAlt": "Shower Enclosure & Bath", "featured": false},
+    {"title": "Black-Framed Shower & Marble Vanity", "categories": ["Residential", "Renovation"], "location": "", "description": "Black-framed glass shower with lit niches alongside a marble vanity top.", "image": "assets/images/projects/black-frame-shower-marble-vanity.jpg", "imageAlt": "Black-Framed Shower & Marble Vanity", "featured": false},
+    {"title": "Two-Tone Galley Kitchen", "categories": ["Residential", "Carpentry"], "location": "", "description": "Timber-look and blue-grey cabinetry with marble-effect worktops and plinth lighting.", "image": "assets/images/projects/two-tone-kitchen.jpg", "imageAlt": "Two-Tone Galley Kitchen", "featured": false},
+    {"title": "Handleless Kitchen", "categories": ["Residential", "Carpentry"], "location": "", "description": "Matte handleless cabinets, lit glass display unit, quartz worktop and under-cabinet lighting.", "image": "assets/images/projects/handleless-kitchen.jpg", "imageAlt": "Handleless Kitchen", "featured": false},
+    {"title": "Kitchen Tall Units", "categories": ["Residential", "Carpentry"], "location": "", "description": "Tall storage with built-in oven housing, fridge recess and a lit glass cabinet.", "image": "assets/images/projects/kitchen-tall-units.jpg", "imageAlt": "Kitchen Tall Units", "featured": false},
+    {"title": "Dressing & Study Unit", "categories": ["Residential", "Carpentry"], "location": "", "description": "Fluted cabinetry, walnut desktop, lit display niches and an illuminated mirror.", "image": "assets/images/projects/dressing-study-unit.jpg", "imageAlt": "Dressing & Study Unit", "featured": false},
+    {"title": "Walnut Sliding Wardrobe", "categories": ["Residential", "Carpentry"], "location": "", "description": "Floor-to-ceiling walnut sliding doors with an integrated oval mirror.", "image": "assets/images/projects/walnut-sliding-wardrobe.jpg", "imageAlt": "Walnut Sliding Wardrobe", "featured": false},
+    {"title": "Oak Shelving & Feature Wall", "categories": ["Residential", "Carpentry", "Fit-Out"], "location": "", "description": "Textured blue feature wall with an oak bookcase, suspended shelving and rattan-front cabinet.", "image": "assets/images/projects/oak-shelving-feature-wall.jpg", "imageAlt": "Oak Shelving & Feature Wall", "featured": false},
+    {"title": "Feature False Ceiling", "categories": ["Residential", "Fit-Out", "Civil Works"], "location": "", "description": "Multi-level gypsum ceiling with coloured finish, cove lighting and recessed spotlights.", "image": "assets/images/projects/feature-false-ceiling.jpg", "imageAlt": "Feature False Ceiling", "featured": false},
+    {"title": "Bedroom with Sculpted Ceiling", "categories": ["Residential", "Fit-Out"], "location": "", "description": "Curved gypsum ceiling with LED cove lighting and wall panelling with brass trims.", "image": "assets/images/projects/bedroom-cove-ceiling.jpg", "imageAlt": "Bedroom with Sculpted Ceiling", "featured": false},
+    {"title": "Master Bedroom Suite", "categories": ["Residential", "Fit-Out"], "location": "", "description": "Sculpted lit ceiling, fluted panel feature with LED edge lighting and a floating vanity.", "image": "assets/images/projects/bedroom-suite.jpg", "imageAlt": "Master Bedroom Suite", "featured": false},
+    {"title": "Dining Room Ceiling & Lighting", "categories": ["Residential", "Interior Design"], "location": "", "description": "Coffered ceiling with warm cove lighting and recessed spots over the dining area.", "image": "assets/images/projects/dining-room-chandelier.jpg", "imageAlt": "Dining Room Ceiling & Lighting", "featured": false},
+    {"title": "Family Lounge", "categories": ["Residential", "Interior Design"], "location": "", "description": "Recessed ceiling with warm cove lighting, wall sconces and recessed spotlights.", "image": "assets/images/projects/living-room-lounge.jpg", "imageAlt": "Family Lounge", "featured": false},
+    {"title": "Entrance Foyer", "categories": ["Residential", "Interior Design"], "location": "", "description": "Lit coffered ceiling with cornice detailing above an arched-panel double door.", "image": "assets/images/projects/entrance-foyer.jpg", "imageAlt": "Entrance Foyer", "featured": false},
+    {"title": "Majlis Seating Area", "categories": ["Residential", "Interior Design"], "location": "", "description": "Lit coffered ceiling with cornice detailing over a traditional floor-seating corner.", "image": "assets/images/projects/majlis-corner.jpg", "imageAlt": "Majlis Seating Area", "featured": false},
+    {"title": "Villa Exterior", "categories": ["Residential", "Civil Works"], "location": "", "description": "Villa facade with arched balconies and a timber pergola.", "image": "assets/images/projects/villa-exterior-night.jpg", "imageAlt": "Villa Exterior", "featured": false},
+    {"title": "TV Wall — 3D Visualization", "categories": ["Residential", "Interior Design"], "location": "", "description": "3D design visualization of a slatted timber media wall, prepared for the client before execution.", "image": "assets/images/projects/tv-wall-3d-visualization.jpg", "imageAlt": "TV Wall — 3D Visualization", "featured": false}
+  ],
+
+  "testimonials": [
+    { "quote": "", "name": "", "role": "", "placeholder": true },
+    { "quote": "", "name": "", "role": "", "placeholder": true },
+    { "quote": "", "name": "", "role": "", "placeholder": true }
+  ],
+
+  "pages": {
+    "home": {
+      "seoTitle": "Interior Design & General Contracting Company in Abu Dhabi, UAE",
+      "seoDescription": "Florel Core delivers interior design, general contracting, renovation, civil works, MEP, fit-out and maintenance for villas, offices and commercial spaces across the UAE.",
+      "sections": [
+        {
+          "type": "hero",
+          "badge": "Abu Dhabi, UAE  |  Serving Clients Across the UAE",
+          "title": "Building Spaces.",
+          "titleAccent": "Creating Experiences.",
+          "subtitle": "Complete Interior Design, Contracting, Renovation & Maintenance Solutions Across the UAE.",
+          "text": "Florel Core General Contracting and Interior Design LLC delivers thoughtful design, quality execution and dependable maintenance solutions for residential and commercial spaces across the UAE.",
+          "image": "assets/images/site/hero-villa.jpg",
+          "imageAlt": "Modern luxury villa with swimming pool",
+          "buttons": [
+            { "label": "Request a Consultation", "href": "#/contact", "style": "gold" },
+            { "label": "Explore Our Services", "href": "#/services", "style": "outline-light" },
+            { "label": "Chat With Us on WhatsApp", "href": "whatsapp", "style": "whatsapp" }
+          ]
+        },
+        {
+          "type": "marquee",
+          "items": ["Interior Design", "General Contracting", "Building Renovation", "Civil Works", "MEP Services", "Carpentry & Joinery", "Interior Fit-Out", "2D & 3D Design", "Space Planning", "Property Maintenance"]
+        },
+        {
+          "type": "intro",
+          "kicker": "Design. Build. Maintain.",
+          "title": "One Team, From First Sketch to Lasting Care",
+          "paragraphs": [
+            "Florel Core brings together interior design, contracting, renovation, civil works, MEP services and general maintenance under one roof. Our experienced engineers, supervisors, skilled technicians and workforce work together to deliver projects with attention to quality, functionality and detail.",
+            "Work with a single team from initial design through execution and maintenance — no handoffs, no disconnects, one point of accountability."
+          ],
+          "steps": [
+            { "title": "Design", "text": "Interior concepts, space planning and 2D/3D visuals shaped around your lifestyle, brand and budget." },
+            { "title": "Build", "text": "Civil works, MEP, carpentry and finishing carried out by our own supervised teams." },
+            { "title": "Maintain", "text": "Dependable maintenance and support after handover, whenever you need it." }
+          ],
+          "images": [
+            { "src": "assets/images/site/living-room.jpg", "alt": "Contemporary open-plan living room" },
+            { "src": "assets/images/site/dining-green.jpg", "alt": "Elegant dining room with green velvet chairs" }
+          ]
+        },
+        {
+          "type": "features",
+          "background": "alt",
+          "kicker": "Why Choose Florel Core?",
+          "title": "Experienced Team. Professional Execution. Complete Solutions.",
+          "lead": "A UAE-based team combining creative design thinking with disciplined technical delivery — for villas, apartments, offices, retail and hospitality spaces.",
+          "items": [
+            { "title": "Experienced UAE Team", "text": "Experienced engineers, supervisors, technicians and skilled workers with strong knowledge of UAE project requirements." },
+            { "title": "Quality Workmanship", "text": "We focus on careful execution, quality materials and attention to detail throughout every stage of the project." },
+            { "title": "Budget-Conscious Solutions", "text": "Practical and cost-conscious solutions designed to deliver value without compromising on quality." },
+            { "title": "Complete Solutions", "text": "From 2D/3D design and planning to civil, MEP, carpentry, interiors, renovation and maintenance." },
+            { "title": "Professional Project Execution", "text": "Structured planning, supervision and coordination to help keep projects organized and efficiently executed." },
+            { "title": "Residential & Commercial Expertise", "text": "Solutions tailored for villas, apartments, offices, retail spaces, hospitality environments and commercial properties." }
+          ]
+        },
+        {
+          "type": "services",
+          "kicker": "What We Do",
+          "title": "Complete Solutions, Under One Roof",
+          "lead": "From concept and design to execution, renovation and maintenance — Florel Core provides complete solutions under one roof.",
+          "limit": 9,
+          "link": { "label": "View All Services", "href": "#/services" }
+        },
+        {
+          "type": "showcase",
+          "background": "alt",
+          "kicker": "Completed Projects",
+          "title": "Happy Clients. Completed Spaces.",
+          "lead": "A selection of spaces we have designed, built and finished for our clients — every photo here is from a real Florel Core project.",
+          "limit": 7,
+          "link": { "label": "View All Projects", "href": "#/projects" }
+        },
+        {
+          "type": "process",
+          "kicker": "How We Work",
+          "title": "A Clear, Five-Step Path From Idea to Handover",
+          "lead": "Structured planning, supervision and coordination keep every project organized and efficiently executed.",
+          "steps": [
+            { "title": "Consultation", "text": "Understand the client's requirements, budget and vision." },
+            { "title": "Design & Planning", "text": "Develop concepts, layouts, material selections and 2D/3D designs." },
+            { "title": "Quotation", "text": "Provide a clear and practical project proposal based on the required scope." },
+            { "title": "Execution", "text": "Our engineers, supervisors and skilled workforce coordinate and execute the project." },
+            { "title": "Handover & Support", "text": "Complete the project with attention to finishing quality and provide ongoing maintenance support when required." }
+          ]
+        },
+        {
+          "type": "checklist",
+          "kicker": "Who We Work With",
+          "title": "Trusted by Homeowners and Businesses Across the UAE",
+          "text": "Whether you own a single apartment or manage a commercial portfolio, we bring the same structured approach and attention to detail.",
+          "image": "assets/images/site/office.jpg",
+          "imageAlt": "Modern commercial office interior",
+          "groups": [
+            { "title": "Residential", "items": ["Villa owners", "Homeowners", "Apartment owners", "Landlords & investors"] },
+            { "title": "Commercial", "items": ["Offices & corporate clients", "Retail shops", "Restaurants & cafés", "Hotels & hospitality"] },
+            { "title": "Property", "items": ["Property management companies", "Facility management companies", "Real estate companies", "Developers"] }
+          ],
+          "button": { "label": "Talk to Our Team", "href": "#/contact", "style": "green" }
+        },
+        {
+          "type": "cta",
+          "kicker": "Start Your Project",
+          "title": "Let's Plan Your Next Space",
+          "text": "Tell us about your villa, apartment, office or commercial space and our team will get back to you with a clear next step.",
+          "image": "assets/images/site/villa-evening.jpg",
+          "imageAlt": "Contemporary villa at dusk",
+          "buttons": [
+            { "label": "Request a Consultation", "href": "#/contact", "style": "gold" },
+            { "label": "Chat on WhatsApp", "href": "whatsapp", "style": "whatsapp" }
+          ]
+        }
+      ]
+    },
+
+    "about": {
+      "seoTitle": "About Us – Interior Design & Contracting Company in Abu Dhabi",
+      "seoDescription": "Florel Core is a UAE-based company specializing in interior design, general contracting, renovation, civil works, MEP, carpentry, fit-out and general maintenance.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "kicker": "About Florel Core",
+          "title": "Creating Better Spaces Through Design, Expertise & Execution.",
+          "lead": "A UAE-based company specializing in interior design, general contracting, renovation, civil works, MEP services, carpentry, fit-out and general maintenance.",
+          "image": "assets/images/site/about-interior.jpg",
+          "imageAlt": "Warm contemporary living space"
+        },
+        {
+          "type": "split",
+          "kicker": "Who We Are",
+          "title": "A Complete Design, Contracting & Maintenance Partner",
+          "paragraphs": [
+            "Florel Core General Contracting and Interior Design LLC is a UAE-based company specializing in interior design, general contracting, renovation, civil works, MEP services, carpentry, fit-out and general maintenance.",
+            "Our team brings together experienced engineers, supervisors, technicians and skilled workers with practical experience in the UAE. We combine creative design thinking with technical execution to deliver functional, attractive and durable spaces.",
+            "We believe quality should be accessible. Our approach is to provide carefully planned, budget-conscious solutions while maintaining professional standards and attention to detail."
+          ],
+          "image": "assets/images/logo.png",
+          "imageAlt": "Florel Core logo",
+          "imageStyle": "logo"
+        },
+        {
+          "type": "experience",
+          "kicker": "Project Experience",
+          "title": "Experience With Corporate & Private Clients",
+          "text": "We have successfully completed projects for corporate and private clients, including work associated with organizations such as:",
+          "names": ["Sinyar", "Ejadah", "Sea Palace", "Khidmah", "Numerous Private Clients"],
+          "note": "Names listed reflect company-provided project experience and do not imply partnership or endorsement."
+        },
+        {
+          "type": "missionVision",
+          "items": [
+            {
+              "label": "Our Mission",
+              "text": "To deliver reliable, high-quality contracting, interior design and maintenance solutions that combine thoughtful design, skilled execution and practical value for every client.",
+              "points": ["Quality", "Reliability", "Customer Satisfaction", "Professional Execution", "Value for Money", "Long-term Relationships"]
+            },
+            {
+              "label": "Our Vision",
+              "text": "To become a trusted UAE name in interior design, contracting, renovation and maintenance by consistently delivering spaces that combine quality, functionality, creativity and lasting value.",
+              "points": []
+            }
+          ]
+        },
+        {
+          "type": "features",
+          "background": "alt",
+          "kicker": "What Sets Us Apart",
+          "title": "Experienced Team. Professional Execution. Complete Solutions.",
+          "lead": "",
+          "items": [
+            { "title": "UAE Project Experience", "text": "Practical, on-the-ground experience delivering residential and commercial work across the UAE." },
+            { "title": "Engineers & Supervisors", "text": "Experienced engineers and skilled supervisors overseeing planning, coordination and site work." },
+            { "title": "Skilled Workforce", "text": "Our own technicians and tradespeople for civil, MEP, carpentry and finishing works." },
+            { "title": "Quality-Focused Execution", "text": "Careful workmanship and attention to finishing detail at every stage." },
+            { "title": "Budget-Conscious Solutions", "text": "Practical options that deliver value without compromising on standards." },
+            { "title": "End-to-End Delivery", "text": "Design, execution, renovation and maintenance — one accountable team." }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Whether it is a complete interior transformation, renovation, fit-out, civil or MEP work, or ongoing property maintenance, Florel Core is ready to help turn your requirements into a finished space.",
+          "button": { "label": "Start Your Project", "href": "#/contact", "style": "gold" }
+        }
+      ]
+    },
+
+    "services": {
+      "seoTitle": "Services – Interior Design, Fit-Out, Renovation, MEP & Maintenance in Abu Dhabi",
+      "seoDescription": "Interior design, 2D/3D design, general contracting, renovation, civil works, MEP services, carpentry, fit-out and general maintenance across Abu Dhabi and the UAE.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "kicker": "Our Services",
+          "title": "Design, Build, Renovate & Maintain — All Under One Roof.",
+          "lead": "Nine disciplines delivered by one accountable team, for residential and commercial clients across the UAE.",
+          "image": "assets/images/site/bedroom.jpg",
+          "imageAlt": "Calm, modern bedroom interior"
+        },
+        { "type": "serviceIndex" },
+        {
+          "type": "serviceDetails",
+          "button": { "label": "Get a Project Quote", "href": "#/contact", "style": "green" }
+        },
+        {
+          "type": "process",
+          "kicker": "How We Work",
+          "title": "A Clear, Five-Step Path From Idea to Handover",
+          "lead": "",
+          "steps": [
+            { "title": "Consultation", "text": "Understand the client's requirements, budget and vision." },
+            { "title": "Design & Planning", "text": "Develop concepts, layouts, material selections and 2D/3D designs." },
+            { "title": "Quotation", "text": "Provide a clear and practical project proposal based on the required scope." },
+            { "title": "Execution", "text": "Our engineers, supervisors and skilled workforce coordinate and execute the project." },
+            { "title": "Handover & Support", "text": "Complete the project with attention to finishing quality and provide ongoing maintenance support when required." }
+          ]
+        },
+        {
+          "type": "cta",
+          "kicker": "Get a Project Quote",
+          "title": "Not Sure Which Service You Need?",
+          "text": "Share your requirements and our team will recommend the right scope — from a single repair to a complete fit-out.",
+          "image": "assets/images/site/villa-evening.jpg",
+          "imageAlt": "Contemporary villa at dusk",
+          "buttons": [
+            { "label": "Talk to Our Team", "href": "#/contact", "style": "gold" },
+            { "label": "Chat on WhatsApp", "href": "whatsapp", "style": "whatsapp" }
+          ]
+        }
+      ]
+    },
+
+    "projects": {
+      "seoTitle": "Projects & Gallery – Interior Design, Fit-Out & Renovation in the UAE",
+      "seoDescription": "Browse Florel Core's residential and commercial project portfolio across interior design, renovation, fit-out, civil, MEP, carpentry and maintenance in the UAE.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "kicker": "Projects & Gallery",
+          "title": "A Portfolio Shaped Across the UAE.",
+          "lead": "Browse our work across residential and commercial spaces — from interior design and fit-out to renovation, civil, MEP, carpentry and maintenance.",
+          "image": "",
+          "imageAlt": ""
+        },
+        { "type": "gallery" },
+        {
+          "type": "cta",
+          "kicker": "Start Your Project",
+          "title": "Have a Space in Mind?",
+          "text": "Tell us what you're planning and we'll help you take it from idea to handover.",
+          "image": "assets/images/site/villa-evening.jpg",
+          "imageAlt": "Contemporary villa at dusk",
+          "buttons": [
+            { "label": "Request a Consultation", "href": "#/contact", "style": "gold" },
+            { "label": "Chat on WhatsApp", "href": "whatsapp", "style": "whatsapp" }
+          ]
+        }
+      ]
+    },
+
+    "testimonials": {
+      "seoTitle": "Client Testimonials",
+      "seoDescription": "What clients say about Florel Core's interior design, contracting, renovation and maintenance work across the UAE.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "kicker": "Testimonials",
+          "title": "What Our Clients Say",
+          "lead": "Built on quality work, professional execution and client satisfaction.",
+          "image": "",
+          "imageAlt": ""
+        },
+        { "type": "testimonials" },
+        {
+          "type": "cta",
+          "kicker": "Talk to Our Team",
+          "title": "Become Our Next Success Story",
+          "text": "Let's discuss your requirements and how we can bring your space to life.",
+          "image": "assets/images/site/villa-evening.jpg",
+          "imageAlt": "Contemporary villa at dusk",
+          "buttons": [
+            { "label": "Request a Consultation", "href": "#/contact", "style": "gold" },
+            { "label": "Chat on WhatsApp", "href": "whatsapp", "style": "whatsapp" }
+          ]
+        }
+      ]
+    },
+
+    "contact": {
+      "seoTitle": "Contact Us – Request a Consultation in Abu Dhabi",
+      "seoDescription": "Contact Florel Core for interior design, fit-out, renovation, contracting and maintenance in Abu Dhabi and across the UAE. Call or WhatsApp +971 58 171 7298.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "kicker": "Contact Us",
+          "title": "Let's Build Something Better.",
+          "lead": "Have a renovation, interior design, fit-out, contracting or maintenance requirement? Tell us about your project and our team will get in touch.",
+          "image": "",
+          "imageAlt": ""
+        },
+        {
+          "type": "contact",
+          "infoKicker": "Get in Touch",
+          "formKicker": "Project Enquiry",
+          "formTitle": "Request a Consultation",
+          "submitLabel": "Request a Consultation",
+          "successMessage": "Thank you for contacting Florel Core. Our team will review your enquiry and get back to you shortly.",
+          "sendVia": "whatsapp",
+          "endpoint": "",
+          "fields": [
+            { "name": "name", "label": "Full Name", "type": "text", "required": true, "placeholder": "Your full name", "width": "half" },
+            { "name": "company", "label": "Company Name", "type": "text", "required": false, "placeholder": "Company (if applicable)", "width": "half" },
+            { "name": "phone", "label": "Phone Number", "type": "tel", "required": true, "placeholder": "+971 5X XXX XXXX", "width": "half" },
+            { "name": "email", "label": "Email", "type": "email", "required": true, "placeholder": "you@example.com", "width": "half" },
+            { "name": "projectType", "label": "Project Type", "type": "select", "required": false, "options": ["Villa", "Apartment", "Office", "Retail Shop", "Restaurant / Café", "Hotel / Hospitality", "Commercial Building", "Other"], "width": "half" },
+            { "name": "location", "label": "Location", "type": "text", "required": false, "placeholder": "e.g. Abu Dhabi, Dubai", "width": "half" },
+            { "name": "service", "label": "Required Service", "type": "select", "required": false, "options": "services", "width": "half" },
+            { "name": "budget", "label": "Approximate Budget", "type": "select", "required": false, "options": ["Under AED 50,000", "AED 50,000 – 150,000", "AED 150,000 – 500,000", "Above AED 500,000", "Not sure yet"], "width": "half" },
+            { "name": "description", "label": "Project Description", "type": "textarea", "required": false, "placeholder": "Tell us about your space, scope and timeline", "width": "full" },
+            { "name": "contactMethod", "label": "Preferred Contact Method", "type": "radio", "required": false, "options": ["WhatsApp", "Phone Call", "Email"], "width": "full" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "footer": {
+    "about": "Interior design, general contracting, renovation, civil works, MEP and maintenance — complete solutions under one roof, across the UAE.",
+    "quickLinksTitle": "Quick Links",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "serviceLinks": ["interior-design", "general-contracting", "renovation", "civil-works", "mep", "carpentry", "fit-out", "maintenance"],
+    "copyright": "© 2026 Florel Core General Contracting and Interior Design LLC. All Rights Reserved."
+  }
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Florel Core | General Contracting & Interior Design, UAE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#FAF8F4; --alt:#F2EFEA; --card:#FFFFFF; --ink:#1E2A24; --muted:#555B57;
+  --gold:#B8A07A; --green:#1B3326; --green-2:#23402F; --line:#E4DED3; --on-green:#F3EFE6;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.7 var(--sans)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.12}
+.kicker{color:var(--gold);font:600 .8rem var(--sans);letter-spacing:.24em;text-transform:uppercase;margin:0 0 14px}
+.rule{width:64px;height:1px;background:var(--gold);margin:26px 0 0}
+.lead{color:var(--muted);font-size:1.1rem;max-width:62ch;margin:18px 0 0}
+
+/* header */
+header.nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:46px;height:46px;border:1px solid var(--gold);display:grid;place-items:center;font:500 1.7rem var(--serif);color:var(--green)}
+.brand b{display:block;font:500 1.4rem var(--serif);letter-spacing:.28em;line-height:1.1}
+.brand small{display:block;font-size:.62rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.links{display:flex;align-items:center;gap:26px;font-weight:500;font-size:.95rem}
+.links a.on{border-bottom:1px solid var(--gold);padding-bottom:2px}
+.phone{display:flex;align-items:center;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--on-green);padding:12px 24px;border-radius:999px;font-weight:500}
+.pill:hover{background:var(--green-2)}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 80px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;
+  background:
+   linear-gradient(180deg,rgba(40,30,15,.25) 0%,rgba(30,45,35,.55) 55%,#1B3326 100%),
+   radial-gradient(ellipse 38% 60% at 50% 105%,rgba(255,255,255,.18),transparent 70%),
+   repeating-linear-gradient(90deg,#B99A6B 0 70px,#CDB188 70px 140px)}
+.hero .wrap{padding-top:80px;padding-bottom:90px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(20,35,25,.55);border-radius:999px;padding:10px 22px;font:500 .78rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#E9DDC4}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.4rem);margin:34px 0 20px;letter-spacing:-.01em}
+.hero h1 em{display:block;color:var(--gold)}
+.hero p{max-width:60ch;margin:0 0 14px;font-size:1.1rem}
+.hero p.sm{color:rgba(255,255,255,.72);font-size:1rem;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.btn-gold{background:var(--gold);color:#1B1B14;padding:16px 34px;border-radius:999px;font-weight:500}
+.btn-line{border:1px solid rgba(255,255,255,.5);padding:15px 34px;border-radius:999px;font-weight:500}
+.btn-gold:hover{filter:brightness(1.07)}.btn-line:hover{background:rgba(255,255,255,.1)}
+.wa{color:#9FE3B2;display:flex;align-items:center;gap:8px}
+.scroll{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:.72rem;letter-spacing:.3em;color:rgba(255,255,255,.6)}
+.float-chat{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;background:#5BD282;color:#0B2515;font-weight:500;padding:14px 24px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+
+/* marquee */
+.marquee{border-bottom:1px solid var(--line);background:var(--alt);overflow:hidden;white-space:nowrap;padding:32px 0}
+.track{display:inline-flex;animation:slide 40s linear infinite}
+.track span{font:600 .95rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--green);padding:0 26px;position:relative}
+.track span::after{content:"";position:absolute;right:-4px;top:50%;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}html{scroll-behavior:auto}}
+
+section.s{padding:100px 0}
+section.alt{background:var(--alt)}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
+.intro h2{font-size:clamp(2rem,4vw,2.9rem)}
+.intro p{color:var(--muted);margin:0 0 20px}
+.intro .body{margin-top:34px}
+.steps3{border-top:1px solid var(--line);margin-top:40px}
+.steps3 div{display:grid;grid-template-columns:70px 1fr;padding-top:26px}
+.steps3 i{font:normal 500 1.5rem var(--serif);color:var(--gold)}
+.steps3 h3{font-size:1.7rem;margin-bottom:6px}
+.steps3 p{margin:0 0 14px}
+.photos{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.ph{background-size:cover;background-position:center}
+.ph.a{aspect-ratio:3/4.1;background:linear-gradient(160deg,#EFE8DA 0%,#BFD2D6 55%,#2F5779 100%)}
+.ph.b{aspect-ratio:3/4.6;margin-top:80px;background:linear-gradient(170deg,#3F2E19,#8B6A3A 50%,#E4D5B4)}
+.photos::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--gold);opacity:.55;pointer-events:none}
+
+/* cards */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,4vw,3rem)}
+.more{font-weight:500;display:inline-flex;gap:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.why{background:var(--card);border:1px solid var(--line);padding:46px 34px 40px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.why:hover{border-color:var(--gold);box-shadow:0 14px 30px rgba(0,0,0,.08);transform:translateY(-6px)}
+.num{font:500 1.7rem var(--serif);color:var(--gold);display:block;margin-bottom:22px}
+.why h3{font-size:1.75rem;margin-bottom:12px}
+.why p{margin:0;color:var(--muted)}
+.svc{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.svc .ph{aspect-ratio:16/10}
+.svc .t{padding:30px 34px 34px;display:flex;flex-direction:column;flex:1}
+.svc h3{font-size:1.75rem;margin-bottom:10px}
+.svc p{margin:0 0 18px;color:var(--muted)}
+.svc a{margin-top:auto;color:var(--gold);font:600 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase}
+
+/* process */
+.dark{background:var(--green);color:var(--on-green)}
+.dark .lead{color:rgba(243,239,230,.72)}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:56px}
+.step{background:var(--green-2);border:1px solid rgba(184,160,122,.22);padding:38px 26px 34px}
+.step:hover{border-color:var(--gold)}
+.step h3{font-size:1.5rem;margin-bottom:12px}
+.step p{margin:0;color:rgba(243,239,230,.72);font-size:.95rem}
+
+/* contact + footer */
+.contact{text-align:center}
+.contact h2{font-size:clamp(2rem,4.5vw,3.2rem);max-width:20ch;margin:0 auto 18px}
+.contact p{color:var(--muted);margin:0 auto 34px;max-width:52ch}
+footer{background:var(--green);color:rgba(243,239,230,.75);padding:34px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.page{display:none}.page.on{display:block}
+.phero{background:var(--alt);border-bottom:1px solid var(--line);padding:110px 0 100px}
+.phero h1{font-size:clamp(2.6rem,6vw,4.6rem);max-width:17ch;letter-spacing:-.01em;margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.frame{position:relative}
+.frame .ph{aspect-ratio:4/3.4}
+.frame::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--gold);opacity:.55;pointer-events:none}
+.srow+.srow{margin-top:110px}
+.srow:nth-child(even) .frame{order:2}
+.sk{color:var(--gold);font:600 .8rem var(--sans);letter-spacing:.24em;text-transform:uppercase;margin:0}
+.srow h2{font-size:clamp(2rem,3.5vw,2.8rem);margin:14px 0}
+.srow p.d{color:var(--muted);margin:0;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:.92rem;background:var(--card)}
+.chips span::before{content:"✓ ";color:var(--gold)}
+.about-text p{color:var(--muted);margin:0 0 18px}
+.fbar{display:flex;flex-wrap:wrap;gap:12px}
+.fchip{border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 1rem var(--sans);padding:12px 26px;border-radius:999px;cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--green);color:var(--on-green);border-color:var(--green)}
+.pcard{background:var(--card);border:1px solid var(--line)}
+.pcard[hidden]{display:none}
+.pcard .ph{aspect-ratio:4/3.1}
+.pcard div.t{padding:22px 26px 26px}
+.pcard h3{font-size:1.5rem;margin-bottom:4px}
+.pcard small{color:var(--gold);font:600 .75rem var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.tcard{background:var(--card);border:1px dashed #D9CDB6;padding:44px 34px 36px}
+.tcard .q{display:block;font:500 5rem/.7 var(--serif);color:#D9C9AB;height:42px}
+.tcard .qt{font:italic 1.5rem/1.3 var(--serif);color:var(--muted);margin:26px 0 38px}
+.who{border-top:1px solid var(--line);padding-top:26px}
+.who b{display:block;font-weight:500}.who span{color:var(--muted);font-size:.92rem}
+.cgrid{display:grid;grid-template-columns:.9fr 1.3fr;gap:48px;align-items:start}
+.cinfo{background:var(--green);color:var(--on-green);padding:56px 48px}
+.cinfo h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:6px 0 34px}
+.crow{display:flex;gap:18px;margin-top:26px}
+.crow>span{color:var(--gold);font-size:1.4rem;line-height:1.3}
+.crow small{display:block;color:rgba(243,239,230,.65)}
+.cform{background:var(--alt);border:1px solid var(--line);padding:56px 48px}
+.cform h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:6px 0 30px}
+.cform label{display:block;font:500 .78rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.cform input,.cform select,.cform textarea{display:block;width:100%;margin-top:10px;padding:15px 16px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:400 1rem var(--sans);letter-spacing:0;text-transform:none;border-radius:0}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.note{margin:18px 0 0;color:var(--green);font-weight:500}
+@media (max-width:900px){.cgrid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.cinfo,.cform{padding:36px 26px}}
+@media (max-width:900px){.two{grid-template-columns:1fr;gap:48px}.srow:nth-child(even) .frame{order:0}.frame::before{display:none}.phero{padding:70px 0}}
+@media (max-width:1020px){
+  .links a:not(.pill):not(.phone){display:none}
+  .grid3{grid-template-columns:1fr 1fr}
+  .grid5{grid-template-columns:1fr 1fr}
+  .intro{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .phone,.brand small{display:none}
+  .grid3,.grid5{grid-template-columns:1fr}
+  section.s{padding:70px 0}
+  .photos::before{display:none}
+  .brand b{font-size:1.15rem;letter-spacing:.2em}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#/"><span class="mark">F</span><span><b>FLOREL CORE</b><small>General Contracting &amp; Interior Design</small></span></a>
+    <nav class="links" aria-label="Main">
+      <a data-r="" href="#/">Home</a>
+      <a data-r="about" href="#/about">About</a>
+      <a data-r="services" href="#/services">Services</a>
+      <a data-r="projects" href="#/projects">Projects</a>
+      <a data-r="testimonials" href="#/testimonials">Testimonials</a>
+      <a data-r="contact" href="#/contact">Contact</a>
+      <a class="phone" href="https://wa.me/971581717298" target="_blank" rel="noopener">☎ +971 58 171 7298</a>
+      <a class="pill" href="#/contact">Get a Quote ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="page" data-page="">
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">⌖ Abu Dhabi, UAE — Serving clients across the UAE</span>
+    <h1>Building Spaces.<em>Creating Experiences.</em></h1>
+    <p>Complete Interior Design, Contracting, Renovation &amp; Maintenance Solutions Across the UAE.</p>
+    <p class="sm">Florel Core General Contracting and Interior Design LLC delivers thoughtful design, quality execution and dependable maintenance solutions for residential and commercial spaces across the UAE.</p>
+    <div class="cta">
+      <a class="btn-gold" href="#/contact">Request a Consultation ↗</a>
+      <a class="btn-line" href="#/services">Explore Our Services</a>
+      <a class="wa" href="https://wa.me/971581717298">◌ Chat With Us on WhatsApp</a>
+    </div>
+  </div>
+  <span class="scroll" aria-hidden="true">SCROLL ↓</span>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Fit-out</span><span>General Contracting</span><span>Civil Works</span><span>MEP Services</span><span>Carpentry &amp; Joinery</span><span>Space Planning</span><span>Villa Renovation</span>
+  <span>Fit-out</span><span>General Contracting</span><span>Civil Works</span><span>MEP Services</span><span>Carpentry &amp; Joinery</span><span>Space Planning</span><span>Villa Renovation</span>
+</div></div>
+
+<section class="s" id="about">
+  <div class="wrap intro">
+    <div>
+      <p class="kicker">Design. Build. Maintain.</p>
+      <h2>One Team, From First Sketch to Lasting Care</h2>
+      <div class="rule"></div>
+      <div class="body">
+        <p>Florel Core brings together interior design, contracting, renovation, civil works, MEP services and general maintenance under one roof. Our experienced engineers, supervisors, skilled technicians and workforce work together to deliver projects with attention to quality, functionality and detail.</p>
+        <p>Work with a single team from initial design through execution and maintenance — no handoffs, no disconnects.</p>
+      </div>
+      <div class="steps3">
+        <div><i>01</i><span><h3>Design</h3><p>Interior concepts, space planning and 2D/3D visuals shaped around your lifestyle, brand and budget.</p></span></div>
+        <div><i>02</i><span><h3>Build</h3><p>Civil works, MEP, carpentry and finishing carried out by our own supervised teams.</p></span></div>
+        <div><i>03</i><span><h3>Maintain</h3><p>Dependable maintenance and support after handover, whenever you need it.</p></span></div>
+      </div>
+    </div>
+    <div class="photos" aria-hidden="true"><div class="ph a" role="img" aria-label="Living and dining room"></div><div class="ph b" role="img" aria-label="Ornate ceiling"></div></div>
+  </div>
+</section>
+
+<section class="s alt" id="why">
+  <div class="wrap">
+    <p class="kicker">Why choose Florel Core?</p>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);max-width:20ch">Experienced Team. Professional Execution. Complete Solutions.</h2>
+    <p class="lead">A UAE-based team combining creative design thinking with disciplined technical delivery — for villas, apartments, offices, retail and hospitality spaces.</p>
+    <div class="rule"></div>
+    <div class="grid3">
+      <article class="why"><span class="num">01</span><h3>Experienced UAE Team</h3><p>Experienced engineers, supervisors, technicians and skilled workers with strong knowledge of UAE project requirements.</p></article>
+      <article class="why"><span class="num">02</span><h3>Quality Workmanship</h3><p>We focus on careful execution, quality materials and attention to detail throughout every stage of the project.</p></article>
+      <article class="why"><span class="num">03</span><h3>Budget-Conscious Solutions</h3><p>Practical and cost-conscious solutions designed to deliver value without compromising on quality.</p></article>
+      <article class="why"><span class="num">04</span><h3>Complete Solutions</h3><p>From 2D/3D design and planning to civil, MEP, carpentry, interiors, renovation and maintenance.</p></article>
+      <article class="why"><span class="num">05</span><h3>Professional Project Execution</h3><p>Structured planning, supervision and coordination keep every project organized and efficiently executed.</p></article>
+      <article class="why"><span class="num">06</span><h3>Residential &amp; Commercial Expertise</h3><p>Experience across villas, apartments, offices, retail spaces, hospitality environments and more.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="kicker">What we do</p>
+        <h2>Complete Solutions, Under One Roof</h2>
+        <p class="lead">Design, renovation, construction and maintenance — nine disciplines, one accountable team.</p>
+        <div class="rule"></div>
+      </div>
+      <a class="more" href="#/services">View All Services ↗</a>
+    </div>
+    <div class="grid3">
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#EFE8DA,#BFD2D6 55%,#2F5779)"></div><div class="t"><h3>Interior Design</h3><p>Thoughtful interior concepts designed around your lifestyle, brand, space and budget.</p><a href="#/contact">Explore ↗</a></div></article>
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#0F1A1C,#4A5A5C 55%,#E8E2D4)"></div><div class="t"><h3>2D &amp; 3D Design</h3><p>Visualize your space before execution with professional design concepts and detailed 2D and 3D presentations.</p><a href="#/contact">Explore ↗</a></div></article>
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#6E7B74,#B6BDB5 55%,#E6E3DC)"></div><div class="t"><h3>General Contracting</h3><p>Professional project execution combining design coordination, civil works, MEP and finishing under one team.</p><a href="#/contact">Explore ↗</a></div></article>
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#8A7B66,#C9B99C)"></div><div class="t"><h3>Civil Works</h3><p>Structural, masonry, plastering and finishing works carried out to specification.</p><a href="#/contact">Explore ↗</a></div></article>
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#37424A,#8DA0AD)"></div><div class="t"><h3>MEP Services</h3><p>Mechanical, electrical and plumbing installation, upgrades and testing.</p><a href="#/contact">Explore ↗</a></div></article>
+      <article class="svc"><div class="ph" style="background:linear-gradient(160deg,#6B4A28,#C79A5E)"></div><div class="t"><h3>Carpentry &amp; Joinery</h3><p>Custom wardrobes, kitchens, doors and built-in furniture made to fit your space.</p><a href="#/contact">Explore ↗</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="s dark" id="process">
+  <div class="wrap">
+    <p class="kicker">How we work</p>
+    <h2 style="font-size:clamp(2rem,4vw,3rem)">A Clear, Five-Step Path From Idea to Handover</h2>
+    <p class="lead">Structured planning, supervision and coordination keep every project organized and efficiently executed.</p>
+    <div class="rule"></div>
+    <div class="grid5">
+      <article class="step"><span class="num">01</span><h3>Consultation</h3><p>Understand the client's requirements, budget and vision.</p></article>
+      <article class="step"><span class="num">02</span><h3>Design &amp; Planning</h3><p>Develop concepts, layouts, material selections and 2D/3D designs.</p></article>
+      <article class="step"><span class="num">03</span><h3>Quotation</h3><p>Provide a clear and practical project proposal based on the required scope.</p></article>
+      <article class="step"><span class="num">04</span><h3>Execution</h3><p>Our engineers, supervisors and skilled workforce coordinate and execute the project.</p></article>
+      <article class="step"><span class="num">05</span><h3>Handover &amp; Support</h3><p>Complete the project with attention to finishing quality and provide ongoing maintenance support when required.</p></article>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" data-page="about">
+  <section class="phero"><div class="wrap">
+    <p class="kicker">About Florel Core</p>
+    <h1>Creating Better Spaces Through Design, Expertise &amp; Execution.</h1>
+    <p class="lead">A UAE-based company specializing in interior design, general contracting, renovation, civil works, MEP services, carpentry, fit-out and general maintenance.</p>
+  </div></section>
+  <section class="s"><div class="wrap two">
+    <div class="frame"><div class="ph" role="img" aria-label="Ornate chandelier ceiling" style="background:linear-gradient(160deg,#E7C88C,#C9A363 45%,#6E8CA8 75%,#F1E3C2)"></div></div>
+    <div class="about-text">
+      <p class="kicker">Who we are</p>
+      <h2 style="font-size:clamp(2rem,3.8vw,2.9rem)">A Complete Design, Contracting &amp; Maintenance Partner</h2>
+      <div class="rule" style="margin-bottom:30px"></div>
+      <p>Florel Core General Contracting and Interior Design LLC is a UAE-based company specializing in interior design, general contracting, renovation, civil works, MEP services, carpentry, fit-out and general maintenance.</p>
+      <p>Our engineers, supervisors and skilled workforce work as one team, so your project moves from concept to handover and ongoing care without handoffs.</p>
+    </div>
+  </div></section>
+  <section class="s alt"><div class="wrap">
+    <p class="kicker">What guides us</p>
+    <h2 style="font-size:clamp(2rem,4vw,3rem)">How We Approach Every Project</h2>
+    <div class="rule"></div>
+    <div class="grid3">
+      <article class="why"><span class="num">01</span><h3>Design Thinking</h3><p>Every space starts with your lifestyle, brand and budget, then becomes a practical plan.</p></article>
+      <article class="why"><span class="num">02</span><h3>Technical Discipline</h3><p>Structured planning, supervision and coordination keep work organized and on track.</p></article>
+      <article class="why"><span class="num">03</span><h3>Lasting Care</h3><p>We stay available after handover with dependable maintenance and support.</p></article>
+    </div>
+  </div></section>
+</div>
+
+<div class="page" data-page="services">
+  <section class="phero"><div class="wrap">
+    <p class="kicker">Our Services</p>
+    <h1>Design, Build, Renovate &amp; Maintain — All Under One Roof.</h1>
+    <p class="lead">Nine disciplines delivered by one accountable team: interior design, 2D/3D design, contracting, renovation, civil works, MEP, carpentry, fit-out and maintenance.</p>
+  </div></section>
+  <section class="s"><div class="wrap" id="svcList"></div></section>
+</div>
+
+<div class="page" data-page="projects">
+  <section class="phero"><div class="wrap">
+    <p class="kicker">Projects &amp; Gallery</p>
+    <h1>A Portfolio Shaped Across the UAE.</h1>
+    <p class="lead">Browse our work across residential, commercial, interior design, renovation, fit-out, civil, MEP, carpentry and maintenance disciplines.</p>
+  </div></section>
+  <section class="s"><div class="wrap">
+    <div class="fbar" id="fbar" role="group" aria-label="Filter projects"></div>
+    <div class="grid3" style="margin-top:44px" id="pgrid"></div>
+  </div></section>
+</div>
+
+<div class="page" data-page="testimonials">
+  <section class="phero"><div class="wrap">
+    <p class="kicker">Testimonials</p>
+    <h1>What Our Clients Say</h1>
+    <p class="lead">Built on quality work, professional execution and client satisfaction.</p>
+  </div></section>
+  <section class="s"><div class="wrap grid3" style="margin-top:0">
+    <article class="tcard"><span class="q">&rdquo;</span><p class="qt">Client testimonial coming soon.</p><div class="who"><b>Valued Florel Core Client</b><span>Residential &amp; Commercial Projects — UAE</span></div></article>
+    <article class="tcard"><span class="q">&rdquo;</span><p class="qt">Client testimonial coming soon.</p><div class="who"><b>Valued Florel Core Client</b><span>Residential &amp; Commercial Projects — UAE</span></div></article>
+    <article class="tcard"><span class="q">&rdquo;</span><p class="qt">Client testimonial coming soon.</p><div class="who"><b>Valued Florel Core Client</b><span>Residential &amp; Commercial Projects — UAE</span></div></article>
+  </div></section>
+</div>
+
+<div class="page" data-page="contact">
+  <section class="phero"><div class="wrap">
+    <p class="kicker">Contact Us</p>
+    <h1>Let&rsquo;s Build Something Better.</h1>
+    <p class="lead">Have a renovation, interior design, fit-out, contracting or maintenance requirement? Tell us about your project and our team will get in touch.</p>
+  </div></section>
+  <section class="s"><div class="wrap cgrid">
+    <aside class="cinfo">
+      <p class="kicker">Get in touch</p>
+      <h2>Florel Core General Contracting and Interior Design LLC</h2>
+      <div class="crow"><span>⌖</span><div>Abu Dhabi, United Arab Emirates<small>Service Area: All Across the UAE</small></div></div>
+      <div class="crow"><span>☎</span><div><a href="https://wa.me/971581717298" target="_blank" rel="noopener">+971 58 171 7298</a><br><a href="https://wa.me/971581717098" target="_blank" rel="noopener">+971 58 171 7098</a></div></div>
+      <div class="crow"><span>◌</span><div><a href="https://wa.me/971581717298">Chat with us on WhatsApp</a></div></div>
+    </aside>
+    <form class="cform" id="cform">
+      <p class="kicker">Project enquiry</p>
+      <h2>Request a Consultation</h2>
+      <div class="frow">
+        <label>Full name *<input name="name" required placeholder="Your full name"></label>
+        <label>Company name<input name="company" placeholder="Company (if applicable)"></label>
+        <label>Phone *<input name="phone" type="tel" required placeholder="+971 5X XXX XXXX"></label>
+        <label>Email *<input name="email" type="email" required placeholder="you@example.com"></label>
+      </div>
+      <label>Service required
+        <select name="service"><option>Interior Design</option><option>2D &amp; 3D Design</option><option>General Contracting</option><option>Renovation</option><option>Civil Works</option><option>MEP Services</option><option>Carpentry &amp; Joinery</option><option>Fit-Out</option><option>Maintenance</option></select>
+      </label>
+      <label>Project details<textarea name="msg" rows="5" placeholder="Tell us about your space, location and timeline"></textarea></label>
+      <button class="btn-gold" type="submit" style="border:0;cursor:pointer;font:500 1rem var(--sans)">Send Enquiry ↗</button>
+      <p class="note" id="cnote" role="status"></p>
+    </form>
+  </div></section>
+</div>
+
+<section class="s contact" id="cta">
+  <div class="wrap">
+    <p class="kicker">Get in touch</p>
+    <h2>Let's Plan Your Next Space</h2>
+    <p>Tell us about your villa, apartment, office or retail space and we will reply with a clear next step.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="pill" href="https://wa.me/971581717298" target="_blank" rel="noopener">Chat +971 58 171 7298</a>
+      
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Florel Core General Contracting and Interior Design LLC</span><span>Abu Dhabi, UAE</span></div></footer>
+<a class="float-chat" href="https://wa.me/971581717298">Chat With Us</a>
+<script>
+(function(){
+  var S=[
+   ["Interior Design","Thoughtful interior concepts designed around your lifestyle, brand, space and budget.",["Concept Development","Space Planning","Material Selection"],"#EFE8DA,#BFD2D6 55%,#2F5779"],
+   ["2D & 3D Design","Visualize your space before execution with professional design concepts and detailed 2D and 3D presentations.",["Layout Drawings","3D Renders","Design Presentations"],"#0F1A1C,#4A5A5C 55%,#E8E2D4"],
+   ["General Contracting","Professional project execution combining design coordination, civil works, MEP and finishing under one team.",["Project Management","Site Supervision","Quality Control"],"#6E7B74,#B6BDB5 55%,#E6E3DC"],
+   ["Renovation","Villa, apartment and commercial renovation that refreshes your space with minimal disruption.",["Villa Renovation","Apartment Upgrades","Commercial Refurbishment"],"#B8A07A,#E8DCC3"],
+   ["Civil Works","Structural, masonry, plastering and finishing works carried out to specification.",["Masonry","Plastering","Waterproofing"],"#8A7B66,#C9B99C"],
+   ["MEP Services","Mechanical, electrical and plumbing installation, upgrades and testing.",["Electrical","Plumbing","HVAC"],"#37424A,#8DA0AD"],
+   ["Carpentry & Joinery","Custom wardrobes, kitchens, doors and built-in furniture made to fit your space.",["Custom Furniture","Kitchens","Doors & Panelling"],"#6B4A28,#C79A5E"],
+   ["Fit-Out","Complete fit-out for offices, retail and hospitality spaces, delivered to your timeline.",["Offices","Retail","Hospitality"],"#2F4A3A,#9DB5A2"],
+   ["Maintenance","Dependable maintenance and support for residential and commercial properties.",["Preventive Care","Repairs","Ongoing Support"],"#5C6770,#C3CBD1"]
+  ];
+  var el=document.getElementById('svcList');
+  el.innerHTML=S.map(function(x,i){
+    return '<article class="srow two"><div class="frame"><div class="ph" role="img" aria-label="'+x[0]+'" style="background:linear-gradient(160deg,'+x[3]+')"></div></div><div><p class="sk">0'+(i+1)+' — Service</p><h2>'+x[0].replace(/&/g,'&amp;')+'</h2><p class="d">'+x[1]+'</p><div class="chips">'+x[2].map(function(c){return '<span>'+c.replace(/&/g,'&amp;')+'</span>'}).join('')+'</div></div></article>';
+  }).join('');
+  var pages=document.querySelectorAll('.page'),links=document.querySelectorAll('[data-r]');
+  var cur=null;
+  function route(){
+    var h=location.hash;
+    if(h&&h.indexOf('#/')!==0)return; // in-page anchor: stay on current page
+    var r=h.replace('#/','');
+    if(['about','services','projects','testimonials','contact'].indexOf(r)<0)r='';
+    document.getElementById('cta').style.display=(r==='contact')?'none':'';
+    pages.forEach(function(p){p.classList.toggle('on',p.dataset.page===r)});
+    links.forEach(function(a){a.classList.toggle('on',a.dataset.r===r)});
+    if(cur!==null&&cur!==r)window.scrollTo(0,0);
+    cur=r;
+  }
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+<script>
+(function(){
+  var cats=["All","Residential","Commercial","Interior Design","Renovation","Fit-Out","Civil Works","MEP","Carpentry","Maintenance"];
+  var P=[
+   ["Modern Villa Exterior",["Residential","Civil Works"],"#1E3A5A,#6C8FB0 50%,#2A2F2A"],
+   ["Warm Contemporary Interior",["Residential","Interior Design"],"#E9DCC3,#C9B08A"],
+   ["Timber-Panelled Lobby",["Commercial","Interior Design","Fit-Out"],"#7A5232,#D2B48A 55%,#EDE7DC"],
+   ["Villa Renovation",["Residential","Renovation"],"#B8A07A,#E8DCC3"],
+   ["Office Fit-Out",["Commercial","Fit-Out"],"#37424A,#A7B4BD"],
+   ["Showroom Joinery",["Commercial","Carpentry"],"#6B4A28,#C79A5E"],
+   ["Building Services Upgrade",["Commercial","MEP"],"#2F4A3A,#9DB5A2"],
+   ["Apartment Refurbishment",["Residential","Renovation","Carpentry"],"#8A7B66,#D8CBB3"],
+   ["Property Maintenance Contract",["Commercial","Maintenance"],"#5C6770,#C3CBD1"]
+  ];
+  var bar=document.getElementById('fbar'),grid=document.getElementById('pgrid');
+  bar.innerHTML=cats.map(function(c,i){return '<button class="fchip" data-c="'+c+'" aria-pressed="'+(i===0)+'">'+c+'</button>'}).join('');
+  grid.innerHTML=P.map(function(x){
+    return '<article class="pcard" data-c="'+x[1].join('|')+'"><div class="ph" role="img" aria-label="'+x[0]+'" style="background:linear-gradient(160deg,'+x[2]+')"></div><div class="t"><h3>'+x[0]+'</h3><small>'+x[1].slice(0,2).join(' · ')+'</small></div></article>';
+  }).join('');
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('.fchip');if(!b)return;
+    bar.querySelectorAll('.fchip').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    grid.querySelectorAll('.pcard').forEach(function(c){c.hidden=(b.dataset.c!=='All'&&c.dataset.c.split('|').indexOf(b.dataset.c)<0)});
+  });
+  document.getElementById('cform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target,t='Hello Florel Core, I would like a consultation.\nName: '+f.name.value+'\nCompany: '+f.company.value+'\nPhone: '+f.phone.value+'\nEmail: '+f.email.value+'\nService: '+f.service.value+'\nDetails: '+f.msg.value;
+    window.open('https://wa.me/971581717298?text='+encodeURIComponent(t),'_blank');
+    document.getElementById('cnote').textContent='Thank you. Your enquiry is ready to send on WhatsApp.';
+  });
+})();
+</script>
+</body>
+</html>
