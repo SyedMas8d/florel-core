@@ -38,6 +38,12 @@
     x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M20 4 4 20"/></svg>'
   };
 
+  /* Phone number followed by the contact person's name (contact.contactNames), if set */
+  function withName(p) {
+    var name = (D.contact.contactNames || {})[p];
+    return esc(p) + (name ? '<span class="pname">' + esc(name) + '</span>' : '');
+  }
+
   /* Resolve special link keywords used in the JSON */
   function href(h) {
     var c = D.contact;
@@ -266,9 +272,9 @@
 
     contact: function (s) {
       var c = D.contact;
-      var phones = c.phones.map(function (p) { return '<a href="tel:+' + digits(p) + '">' + esc(p) + '</a>'; }).join('');
+      var phones = c.phones.map(function (p) { return '<a href="tel:+' + digits(p) + '">' + withName(p) + '</a>'; }).join('');
       var was = c.whatsapp.map(function (p) {
-        return '<a href="https://wa.me/' + digits(p) + '?text=' + encodeURIComponent(c.whatsappMessage) + '" target="_blank" rel="noopener">' + esc(p) + '</a>';
+        return '<a href="https://wa.me/' + digits(p) + '?text=' + encodeURIComponent(c.whatsappMessage) + '" target="_blank" rel="noopener">' + withName(p) + '</a>';
       }).join('');
       var fields = (s.fields || []).map(function (f) {
         var req = f.required ? ' required' : '';
@@ -302,6 +308,7 @@
         '</aside>' +
         '<form class="cform reveal d1" id="enquiry" novalidate>' + kicker(s.formKicker) + '<h2>' + esc(s.formTitle) + '</h2>' +
           '<div class="fgrid">' + fields + '</div>' +
+          '<p class="form-error" role="alert"></p>' +
           '<button class="btn btn-green" type="submit">' + esc(s.submitLabel || 'Send') + I.arrow + '</button>' +
           '<p class="success" role="status" aria-live="polite">' + esc(s.successMessage) + '</p>' +
         '</form></div></section>';
@@ -325,7 +332,8 @@
         n.links.map(function (l) { return '<a class="nl" href="' + esc(l.href) + '">' + esc(l.label) + '<span aria-hidden="true">→</span></a>'; }).join('') +
         button({ label: n.cta.label, href: n.cta.href, style: 'green' }) +
         '<p class="dcontact">' + esc(c.phones.join('  ·  ')) + '<br>' + esc(c.email) + '</p>' +
-      '</nav>';
+      '</nav>' +
+      '<div class="scrim" aria-hidden="true"></div>';
 
     var nav = $('#nav'), burger = $('.burger', nav);
     burger.addEventListener('click', function () {
@@ -334,6 +342,10 @@
       burger.setAttribute('aria-expanded', open);
       burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       document.body.style.overflow = open ? 'hidden' : '';
+    });
+    $('.scrim', nav).addEventListener('click', function () { burger.click(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) burger.click();
     });
 
     // footer
@@ -351,7 +363,7 @@
       }).join('') + '</ul></div>' +
       '<div><h4>' + esc(f.contactTitle) + '</h4><ul>' +
         '<li>' + esc(c.address) + '</li>' +
-        c.phones.map(function (p) { return '<li><a href="tel:+' + digits(p) + '">' + esc(p) + '</a></li>'; }).join('') +
+        c.phones.map(function (p) { return '<li><a href="tel:+' + digits(p) + '">' + withName(p) + '</a></li>'; }).join('') +
         '<li><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></li>' +
         '<li>Service area: ' + esc(c.serviceArea) + '</li>' +
       '</ul></div>' +
@@ -367,7 +379,7 @@
       }).join('') + '</nav>';
 
     // brand assets used in CSS and head
-    document.documentElement.style.setProperty('--mark', 'url("' + s.logoMark + '")');
+    document.documentElement.style.setProperty('--mark', 'url("' + new URL(s.logoMark, location.href).href + '")');   // absolute, or CSS resolves it from assets/css/
     document.documentElement.lang = s.language || 'en';
 
     // Local business structured data for SEO
@@ -498,8 +510,24 @@
   function submitForm(e) {
     e.preventDefault();
     var form = e.target;
-    if (!form.checkValidity()) { form.reportValidity(); return; }
     var cfg = (D.pages.contact.sections || []).filter(function (s) { return s.type === 'contact'; })[0] || {};
+    var err = $('.form-error', form);
+    // show what is missing next to the button and bring the first bad field into view,
+    // otherwise the browser's tiny tooltip appears off-screen and the click seems to do nothing
+    form.classList.add('checked');
+    var bad = $$(':invalid', form).filter(function (el) { return el.name; });
+    if (bad.length) {
+      var labels = bad.map(function (el) {
+        var f = (cfg.fields || []).filter(function (x) { return x.name === el.name; })[0];
+        return f ? f.label : el.name;
+      });
+      err.textContent = 'Please fill in: ' + labels.join(', ');
+      err.classList.add('show');
+      bad[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      bad[0].focus({ preventScroll: true });
+      return;
+    }
+    err.classList.remove('show');
     var data = {}, lines = ['Hello Florel Core, I would like to request a consultation.', ''];
     (cfg.fields || []).forEach(function (f) {
       var el = form.elements[f.name];
@@ -511,16 +539,20 @@
     var done = function () {
       $('.success', form).classList.add('show');
       form.reset();
+      form.classList.remove('checked');
     };
 
     if (cfg.endpoint) {                        // e.g. a Formspree / backend URL
       fetch(cfg.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
         .then(done).catch(done);
-    } else if (cfg.sendVia === 'email') {
-      location.href = 'mailto:' + D.contact.email + '?subject=' + encodeURIComponent('Consultation request') + '&body=' + encodeURIComponent(msg);
+    } else if ((data.contactMethod || cfg.sendVia || '').toLowerCase() === 'email') {   // chosen chip wins over sendVia
+      var subject = 'Consultation request' + (data.name ? ' – ' + data.name : '');
+      location.href = 'mailto:' + D.contact.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(msg);
       done();
     } else {                                   // default: WhatsApp
-      window.open('https://wa.me/' + digits(D.contact.whatsapp[0]) + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      var wa = 'https://wa.me/' + digits(D.contact.whatsapp[0]) + '?text=' + encodeURIComponent(msg);
+      var tab = window.open(wa, '_blank');
+      if (tab) tab.opener = null; else location.href = wa;   // popup blocked: open in this tab instead
       done();
     }
   }

@@ -19,6 +19,10 @@
     "serviceArea": "All across the UAE",
     "phones": ["+971 58 171 7298", "+971 58 171 7098"],
     "whatsapp": ["+971 58 171 7298", "+971 58 171 7098"],
+    "contactNames": {
+      "+971 58 171 7298": "Mohamed Sareef",
+      "+971 58 171 7098": "Mohammed Kaif"
+    },
     "email": "info@florelcoreuae.com",
     "whatsappMessage": "Hello Florel Core, I would like to enquire about your interior design / contracting / renovation services. Please share more information."
   },
@@ -472,13 +476,13 @@
             { "name": "name", "label": "Full Name", "type": "text", "required": true, "placeholder": "Your full name", "width": "half" },
             { "name": "company", "label": "Company Name", "type": "text", "required": false, "placeholder": "Company (if applicable)", "width": "half" },
             { "name": "phone", "label": "Phone Number", "type": "tel", "required": true, "placeholder": "+971 5X XXX XXXX", "width": "half" },
-            { "name": "email", "label": "Email", "type": "email", "required": true, "placeholder": "you@example.com", "width": "half" },
+            { "name": "email", "label": "Email", "type": "email", "required": false, "placeholder": "you@example.com", "width": "half" },
             { "name": "projectType", "label": "Project Type", "type": "select", "required": false, "options": ["Villa", "Apartment", "Office", "Retail Shop", "Restaurant / Café", "Hotel / Hospitality", "Commercial Building", "Other"], "width": "half" },
             { "name": "location", "label": "Location", "type": "text", "required": false, "placeholder": "e.g. Abu Dhabi, Dubai", "width": "half" },
             { "name": "service", "label": "Required Service", "type": "select", "required": false, "options": "services", "width": "half" },
             { "name": "budget", "label": "Approximate Budget", "type": "select", "required": false, "options": ["Under AED 50,000", "AED 50,000 – 150,000", "AED 150,000 – 500,000", "Above AED 500,000", "Not sure yet"], "width": "half" },
             { "name": "description", "label": "Project Description", "type": "textarea", "required": false, "placeholder": "Tell us about your space, scope and timeline", "width": "full" },
-            { "name": "contactMethod", "label": "Preferred Contact Method", "type": "radio", "required": false, "options": ["WhatsApp", "Phone Call", "Email"], "width": "full" }
+            { "name": "contactMethod", "label": "Preferred Contact Method", "type": "radio", "required": false, "options": ["WhatsApp", "Email"], "width": "full" }
           ]
         }
       ]
